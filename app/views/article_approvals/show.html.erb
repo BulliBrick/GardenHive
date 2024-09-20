@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @article_approval %>
+
+<div>
+  <%= link_to "Edit this article approval", edit_article_approval_path(@article_approval) %> |
+  <%= link_to "Back to article approvals", article_approvals_path %>
+
+  <%= button_to "Destroy this article approval", @article_approval, method: :delete %>
+</div>

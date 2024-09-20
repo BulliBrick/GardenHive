@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Article approvals" %>
+
+<h1>Article approvals</h1>
+
+<div id="article_approvals">
+  <% @article_approvals.each do |article_approval| %>
+    <%= render article_approval %>
+    <p>
+      <%= link_to "Show this article approval", article_approval %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New article approval", new_article_approval_path %>

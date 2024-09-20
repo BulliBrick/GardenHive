@@ -1,0 +1,2 @@
+module ArticleApprovalsHelper
+end

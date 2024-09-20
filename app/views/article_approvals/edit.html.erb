@@ -1,0 +1,12 @@
+<% content_for :title, "Editing article approval" %>
+
+<h1>Editing article approval</h1>
+
+<%= render "form", article_approval: @article_approval %>
+
+<br>
+
+<div>
+  <%= link_to "Show this article approval", @article_approval %> |
+  <%= link_to "Back to article approvals", article_approvals_path %>
+</div>
