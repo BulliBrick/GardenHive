@@ -1,6 +1,6 @@
 class ThemesController < ApplicationController
   before_action :set_theme, only: [:show, :edit, :update, :destroy]
-  before_action :authorize_admin, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @themes = Theme.all
@@ -23,22 +23,6 @@ class ThemesController < ApplicationController
     end
   end
 
-  def edit
-  end
-
-  def update
-    if @theme.update(theme_params)
-      redirect_to @theme, notice: 'Theme updated successfully.'
-    else
-      render :edit
-    end
-  end
-
-  def destroy
-    @theme.destroy
-    redirect_to themes_url, notice: 'Theme deleted successfully.'
-  end
-
   private
 
   def set_theme
@@ -47,11 +31,5 @@ class ThemesController < ApplicationController
 
   def theme_params
     params.require(:theme).permit(:name)
-  end
-
-  def authorize_admin
-    # Implement admin authorization logic here
-    # For example, using CanCanCan:
-    # authorize! :manage, Theme
   end
 end

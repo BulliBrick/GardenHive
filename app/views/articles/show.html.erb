@@ -1,10 +1,23 @@
-<p style="color: green"><%= notice %></p>
+<!-- app/views/articles/show.html.erb -->
+<h1><%= @article.title %></h1>
+<p><strong>Theme:</strong> <%= @article.theme.name %></p>
+<p><strong>Author:</strong> <%= @article.user.username %></p>
 
-<%= render @article %>
-
-<div>
-  <%= link_to "Edit this article", edit_article_path(@article) %> |
-  <%= link_to "Back to articles", articles_path %>
-
-  <%= button_to "Destroy this article", @article, method: :delete %>
+<div class="article-body">
+  <%= simple_format(@article.body) %>
 </div>
+
+<% if user_signed_in? && current_user == @article.user %>
+  <%= link_to 'Edit', edit_article_path(@article), class: 'btn btn-secondary' %>
+  <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+<% end %>
+
+<h2 class="mt-4">Comments</h2>
+<%= render @article.comments %>
+
+<% if user_signed_in? %>
+  <h3>Add a comment:</h3>
+  <%= render 'comments/form' %>
+<% else %>
+  <p>Please <%= link_to 'log in', new_user_session_path %> to add a comment.</p>
+<% end %>

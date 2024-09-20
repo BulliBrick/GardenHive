@@ -1,16 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
-<% content_for :title, "Themes" %>
-
+<!-- app/views/themes/index.html.erb -->
 <h1>Themes</h1>
 
-<div id="themes">
+<div class="row">
   <% @themes.each do |theme| %>
-    <%= render theme %>
-    <p>
-      <%= link_to "Show this theme", theme %>
-    </p>
+    <div class="col-md-4 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= link_to theme.name, theme_path(theme) %></h5>
+          <p class="card-text"><%= pluralize(theme.articles.count, 'article') %></p>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New theme", new_theme_path %>
+<%= link_to 'New Theme', new_theme_path, class: 'btn btn-primary' if user_signed_in? %>

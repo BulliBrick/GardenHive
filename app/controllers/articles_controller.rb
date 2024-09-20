@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :authorize_user, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @articles = Article.all
@@ -53,11 +53,5 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :body, :theme_id)
-  end
-
-  def authorize_user
-    # Implement authorization logic here
-    # For example, using CanCanCan:
-    # authorize! :manage, Article
   end
 end

@@ -58,20 +58,14 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  root 'articles#index'
+  
+  
   resources :articles do
-    resources :comments, only: [:create, :update, :destroy]
-    resources :article_approvals, only: [:create, :update, :destroy]
+    resources :comments, only: [:create]
   end
-
-  resources :themes
-  resources :users
-  resources :user_roles
-
-  namespace :admin do
-    resources :users
-    resources :article_approvals, only: [:index, :update]
-  end
-
-    root 'articles#index'
-
+  
+  resources :themes, only: [:index, :show, :new, :create]
+  
+  resources :users, only: [:show]
 end
