@@ -1,12 +1,12 @@
-<% content_for :title, "Editing user" %>
+<h1>Edit User</h1>
+<%= form_with(model: @user, local: true) do |form| %>
+  <%= form.label :username %>
+  <%= form.text_field :username %>
 
-<h1>Editing user</h1>
+  <%= form.label :email %>
+  <%= form.email_field :email %>
 
-<%= render "form", user: @user %>
-
-<br>
-
-<div>
-  <%= link_to "Show this user", @user %> |
-  <%= link_to "Back to users", users_path %>
-</div>
+  <%= form.label :user_role%>
+    <%= form.select :user_role, ['admin', 'moderator', 'user'], { include_blank: "Select a role" }, class: 'form-control' %>
+  <%= form.submit %>
+<% end %>

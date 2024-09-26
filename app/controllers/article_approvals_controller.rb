@@ -1,8 +1,9 @@
 class ArticleApprovalsController < ApplicationController
   before_action :set_article_approval, only: [:show, :edit, :update, :destroy]
-  before_action :authorize_moderator
+  before_action :require_mod or :require_admin
 
   def index
+    @article_approvals = @article_approvals
     @article_approvals = ArticleApproval.where(status: 'pending')
   end
 
@@ -11,6 +12,7 @@ class ArticleApprovalsController < ApplicationController
 
   def update
     if @article_approval.update(article_approval_params)
+      @article_approval.article.update(status: @article_approval.status)
       redirect_to @article_approval.article, notice: 'Article approval status updated.'
     else
       render :edit

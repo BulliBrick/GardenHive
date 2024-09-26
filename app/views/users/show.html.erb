@@ -1,10 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @user %>
-
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
-</div>
+<h1><%= @user.username %></h1>
+<p>Email: <%= @user.email %></p>
+<p>Created: <%= @user.created_at.strftime('%B %d, %Y') %></p>
+<p>Username: <%= @user.username %></p>
+<p>Role: <%= @user.user_role %></p>
+<h2>Articles</h2>
+<ul>
+  <% @user.articles.each do |article| %>
+    <li><%= link_to article.title, article_path(article) %></li>
+  <% end %>
+</ul>

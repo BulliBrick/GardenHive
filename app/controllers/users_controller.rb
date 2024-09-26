@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :authorize_admin, except: [:show]
+  before_action :require_admin, except: [:index, :show, :new, :create]
 
   def index
     @users = User.all
+    @users = @users
   end
 
   def show
@@ -11,28 +12,25 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @user_roles = UserRole.all
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       redirect_to @user, notice: 'User created successfully.'
     else
-      @user_roles = UserRole.all
       render :new
     end
   end
 
   def edit
-    @user_roles = UserRole.all
   end
 
   def update
     if @user.update(user_params)
       redirect_to @user, notice: 'User updated successfully.'
     else
-      @user_roles = UserRole.all
       render :edit
     end
   end
@@ -49,12 +47,21 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation, :user_role_id)
-  end
+    params.require(:user).permit(:user_id, :username, :email, :password, :password_confirmation, :user_role)
+  end  
+
 
   def authorize_admin
     # Implement admin authorization logic here
     # For example, using CanCanCan:
     # authorize! :manage, User
   end
+
+  def admin?
+    current_user.user_role == "admin"
+  end
+  def moderator?
+    current_user.user_role == "moderator"
+  end
+
 end

@@ -1,9 +1,9 @@
 class ThemesController < ApplicationController
   before_action :set_theme, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @themes = Theme.all
+    @themes = @themes
   end
 
   def show

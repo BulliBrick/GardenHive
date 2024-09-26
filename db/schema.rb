@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_20_114116) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_26_121627) do
   create_table "article_approvals", force: :cascade do |t|
     t.integer "article_id", null: false
     t.integer "user_id", null: false
@@ -43,25 +43,24 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_20_114116) do
   end
 
   create_table "themes", force: :cascade do |t|
-    t.string "theme_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "user_roles", force: :cascade do |t|
-    t.string "role_name"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
-    t.string "email"
-    t.integer "user_role_id", null: false
+    t.string "user_role", default: "user"
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_role_id"], name: "index_users_on_user_role_id"
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "article_approvals", "articles"
@@ -70,5 +69,4 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_20_114116) do
   add_foreign_key "articles", "users"
   add_foreign_key "comments", "articles"
   add_foreign_key "comments", "users"
-  add_foreign_key "users", "user_roles"
 end

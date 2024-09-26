@@ -1,6 +1,10 @@
 class CommentsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_article
+  before_action :require_user
+
+  def index
+    @comments = @comments
+  end
 
   def create
     @comment = @article.comments.build(comment_params)
@@ -8,7 +12,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to @article, notice: 'Comment added successfully.'
     else
-      redirect_to @article, alert: 'Failed to add comment.'
+      redirect_to @article, alert: 'Failed to add comment. error: ' + @comment.errors.full_messages.join(', ')
     end
   end
 
@@ -19,6 +23,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(:comment).permit(:content)
+    params.require(:comment).permit(:comment_content)
   end
 end

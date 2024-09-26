@@ -26,11 +26,11 @@
     <%= form.text_field :user_id %>
   </div>
 
-  <div>
-    <%= form.label :theme_id, style: "display: block" %>
-    <%= form.text_field :theme_id %>
-  </div>
 
+  <div>
+        <%= form.collection_select :theme_id, Theme.all, :id, :name, { prompt: "Select a theme" }%>
+      
+  </div>
   <div>
     <%= form.submit %>
   </div>

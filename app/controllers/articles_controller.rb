@@ -1,8 +1,9 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :require_user, except: [:index, :show]
 
   def index
+    @articles = @articles
     @articles = Article.all
     @articles = @articles.where(theme_id: params[:theme_id]) if params[:theme_id].present?
   end
@@ -22,6 +23,7 @@ class ArticlesController < ApplicationController
       ArticleApproval.create(article: @article, status: 'pending')
       redirect_to @article, notice: 'Article submitted for approval.'
     else
+      flash.now[:alert] = 'There was an error creating the article.'
       @themes = Theme.all
       render :new
     end
@@ -54,4 +56,6 @@ class ArticlesController < ApplicationController
   def article_params
     params.require(:article).permit(:title, :body, :theme_id)
   end
+
+
 end
