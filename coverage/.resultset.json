@@ -1,287 +1,675 @@
 {
   "Minitest": {
     "coverage": {
-      "/home/ams/Projektarbeit/garden_hive_v2/test/controllers/admins_controller_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/channels/application_cable/channel.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
           0,
           0,
-          null,
-          null
-        ]
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/controllers/article_approvals_controller_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/channels/application_cable/connection.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
           0,
           0,
-          null,
-          null,
-          1,
           0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null
-        ]
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/controllers/articles_controller_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/controllers/application_controller.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
           0,
+          null,
           0,
           null,
           null,
-          1,
+          0,
           0,
           0,
           null,
           null,
-          1,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           null,
           null,
-          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
           0,
           0,
           null,
           null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
           0,
           null,
           null
-        ]
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/controllers/comments_controller_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/controllers/article_approvals_controller.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
+          0,
           0,
           0,
           null,
-          null,
-          1,
+          0,
+          0,
           0,
           0,
           null,
-          null,
-          1,
           0,
           0,
           null,
-          null
-        ]
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/controllers/sessions_controller_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/controllers/articles_controller.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
+          0,
           0,
           0,
           null,
-          null,
-          1,
           0,
           0,
-          null,
-          null,
-          1,
+          0,
           0,
           0,
           null,
-          null
-        ]
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/controllers/themes_controller_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/controllers/comments_controller.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
+          0,
           0,
           0,
           null,
-          null,
-          1,
           0,
-          0,
-          null,
-          null,
-          1,
           0,
           0,
           null,
-          null,
-          1,
           0,
           0,
-          null,
-          null,
-          1,
           0,
           0,
-          null,
-          null,
-          1,
+          0,
+          0,
+          0,
           0,
           0,
           null,
-          null,
-          1,
-          0,
           0,
           null,
-          null
-        ]
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/controllers/users_controller_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/controllers/password_controller.rb": {
         "lines": [
-          1,
+          0,
+          0,
           null,
-          1,
-          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           0,
           0,
           null,
           null,
-          1,
           0,
           0,
-          null,
-          null,
-          1,
           0,
           0,
-          null,
-          null,
-          1,
+          0,
           0,
           0,
           null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          null,
-          null
-        ]
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/models/activity_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/controllers/sessions_controller.rb": {
         "lines": [
-          1,
+          0,
+          0,
+          0,
           null,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
-          null,
-          null,
-          null
-        ]
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/models/article_approval_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/controllers/themes_controller.rb": {
         "lines": [
-          1,
+          0,
+          0,
           null,
-          1,
+          0,
+          0,
+          0,
+          0,
           null,
+          0,
+          0,
+          0,
           null,
+          0,
+          0,
+          0,
           null,
-          null
-        ]
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/models/article_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/controllers/users_controller.rb": {
         "lines": [
-          1,
+          0,
+          0,
+          0,
+          0,
           null,
-          1,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
           null,
           null,
           null,
-          null
-        ]
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/models/comment_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/helpers/admins_helper.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/models/theme_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/helpers/application_helper.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
+          0,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/ams/Projektarbeit/garden_hive_v2/test/models/user_test.rb": {
+      "/home/ams/Projektarbeit/garden_hive_v2/app/helpers/article_approvals_helper.rb": {
         "lines": [
-          1,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/helpers/articles_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/helpers/comments_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/helpers/sessions_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/helpers/themes_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/helpers/user_roles_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/helpers/users_helper.rb": {
+        "lines": [
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/jobs/application_job.rb": {
+        "lines": [
+          0,
           null,
-          1,
           null,
           null,
           null,
-          null
-        ]
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/mailers/application_mailer.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/models/ability.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/models/application_record.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/models/article.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/models/article_approval.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/models/comment.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/models/theme.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/models/user.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/ams/Projektarbeit/garden_hive_v2/app/policies/admin_policy.rb": {
+        "lines": [
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1727422983
+    "timestamp": 1727430236
   }
 }
