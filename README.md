@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Admin User : simonadm@example.com
+Admin Password : adminpassword
 
-Things you may want to cover:
+Mod User : simonmod@example.com
+Mod Password : moderatorpassword
 
-* Ruby version
+User can be created in the app itself
 
-* System dependencies
+Starten der Applikation
 
-* Configuration
+Zuerst sollten die gems überprüft werden mit : 'bundle install'
 
-* Database creation
+Danach kann der server mit : 'bundle exec rails server', gestartet werden
 
-* Database initialization
+Der server läuft nun auf dem localhost mit dem port 3000 (localhost:3000)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

@@ -2,10 +2,8 @@
 
 one:
   article: one
-  user: one
   status: MyString
 
 two:
   article: two
-  user: two
   status: MyString

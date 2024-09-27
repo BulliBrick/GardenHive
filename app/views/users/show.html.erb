@@ -3,6 +3,10 @@
 <p>Created: <%= @user.created_at.strftime('%B %d, %Y') %></p>
 <p>Username: <%= @user.username %></p>
 <p>Role: <%= @user.user_role %></p>
+<div>
+  <%= link_to 'Edit', edit_user_path(@user) %>
+  <%= link_to 'Change Password', edit_password_path(@user) %>
+</div>
 <h2>Articles</h2>
 <ul>
   <% @user.articles.each do |article| %>

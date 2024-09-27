@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :require_admin, except: [:index, :show, :new, :create]
+  before_action :authorize_user, only: [:show ]
 
   def index
-    @users = User.all
+    @users = User.all 
     @users = @users
   end
 
@@ -31,7 +32,7 @@ class UsersController < ApplicationController
     if @user.update(user_params)
       redirect_to @user, notice: 'User updated successfully.'
     else
-      render :edit
+      render :edit, notice: 'There was an error updating the user.'
     end
   end
 
@@ -44,17 +45,22 @@ class UsersController < ApplicationController
 
   def set_user
     @user = User.find(params[:id])
+    unless @user
+      redirect_to users_path, alert: 'User not found.'
+    end
   end
 
   def user_params
-    params.require(:user).permit(:user_id, :username, :email, :password, :password_confirmation, :user_role)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation, :user_role)
   end  
 
 
-  def authorize_admin
-    # Implement admin authorization logic here
-    # For example, using CanCanCan:
-    # authorize! :manage, User
+
+  def authorize_user
+    unless current_user.admin? || current_user == @user
+      flash[:alert] = "You are not authorized to view this profile."
+      redirect_to root_path
+    end
   end
 
   def admin?

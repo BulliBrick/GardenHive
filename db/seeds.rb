@@ -22,26 +22,26 @@ themes = ['Gardening', 'Sustainability', 'Urban Farming', 'Permaculture', 'Organ
 end
 
 # Create Users
-puts "Creating users..."
-user = 
-  User.create!(
-    username: "user8",
-    email: "user8@example.com",
-    password: 'password',
-    password_confirmation: 'password',
-   user_role: 'user'
-  )
+#puts "Creating users..."
+#user = 
+#  User.create!(
+#    username: "user8",
+#    email: "user8@example.com",
+#    password: 'password',
+#    password_confirmation: 'password',
+#   user_role: 'user'
+#  )
 
 
 
 # Ensure we have an admin user
-#admin_user = User.create!(
-#  username: 'simon',
-#  email: 'simonadm@example.com',
-# password: 'adminpassword',
-# password_confirmation: 'adminpassword',
-#user_role: 'admin'
-#)
+mod_user = User.create!(
+  username: 'simonmod',
+  email: 'simonmod@example.com',
+ password: 'moderatorpassword',
+ password_confirmation: 'moderatorpassword',
+user_role: 'moderator'
+)
 
 puts "Seed data creation completed!"
 puts "Created:"

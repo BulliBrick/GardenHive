@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   get 'logout', to: 'sessions#destroy'
 
+  get 'change_password/:id', to: 'password#edit', as: 'edit_password'
+  patch 'change_password/:id', to: 'password#update', as: 'update_password'
 
   get 'signup', to: 'users#new'
 

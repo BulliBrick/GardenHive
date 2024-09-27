@@ -35,6 +35,10 @@ gem "bootsnap", require: false
 # gem "image_processing", "~> 1.2"
 gem 'bcrypt'
 gem 'cancancan'
+gem 'paper_trail'
+gem 'pundit'
+
+gem 'simplecov', require: false, group: :test
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
